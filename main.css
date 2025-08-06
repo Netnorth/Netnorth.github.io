@@ -1,20 +1,92 @@
-body {
-    background-color: cornsilk;
-}
-h1 {
-    background-color: palevioletred;
-    color: beige;
-    text-align: center;
-    border: 5px salmon;
-}
-h2 {
-    color: violet;
-    background-color: blanchedalmond;
-    text-align: left;
-    border: 20px salmon;
-}
-p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 25px;
-    color: rosybrown;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Sesuai Gambar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #222;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 95%;
+      margin: 20px auto;
+      background: #222;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+    .header, .footer {
+      background: #b80000;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .footer {
+      margin-top: 10px;
+      font-size: 1.2em;
+      padding: 15px 0;
+    }
+    .nav {
+      background: #ff9800;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+    .main {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .sidebar {
+      background: #dc5d50;
+      color: #fff;
+      flex: 1;
+      text-align: center;
+      padding: 70px 0;
+      font-size: 1.6em;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+    .content {
+      background: #ff9800;
+      color: #fff;
+      flex: 2.5;
+      text-align: center;
+      padding: 80px 0;
+      font-size: 2em;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+    @media (max-width: 800px) {
+      .main {
+        flex-direction: column;
+      }
+      .sidebar, .content {
+        padding: 40px 0;
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Header</div>
+    <div class="nav">Menu Navigasi</div>
+    <div class="main">
+      <div class="sidebar">Sidebar</div>
+      <div class="content">Content</div>
+      <div class="sidebar">Sidebar</div>
+    </div>
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>
